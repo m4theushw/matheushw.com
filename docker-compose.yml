@@ -1,0 +1,18 @@
+version: "3.1"
+
+services:
+  nginx:
+    image: nginx
+    container_name: matheushw_nginx
+    restart: always
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    labels:
+      - "traefik.http.routers.matheushw_secure.rule=Host(`matheushw.com`)"
+      - "traefik.http.routers.matheushw_secure.tls.certresolver=matheushw"
+      - "traefik.http.routers.matheushw_secure.entrypoints=websecure"
+      - "traefik.http.routers.matheushw.rule=Host(`matheushw.com`)"
+      - "traefik.http.routers.matheushw.entrypoints=web"
+      - "traefik.http.routers.matheushw.middlewares=redirect-to-https"
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"

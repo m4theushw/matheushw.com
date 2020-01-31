@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Matheus Wichman</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img class="avatar" src="https://github.com/m4theushw.png?size=140" alt="Matheus Wichman's photo">
+      <h1>Matheus Wichman</h1>
+      <p>Hello! I'm <span id="age">?</span> y.o. and I’m a <strong>front end developer</strong> based in Brazil. I started my career when I was 14 in a remote full-stack job. In my spare time I created <a href="https://superdividendos.com.br" target="_blank">Super Dividendos</a> and <a href="https://achacasa.online" target="_blank">Acha Casa</a>.</p>
+      <p>I love working in React projects but my skills are not limited to just that. I have a good taste writing HTML, CSS and vanilla JavaScript. I have experience building PHP applications and I’m a Python enthusiast too.</p>
+      <p>I also like to help the open source community. I contribute to <a href="https://github.com/mui-org/material-ui/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Am4theushw+" target="_blank">Material-UI</a> and <a href="https://github.com/marmelab/react-admin/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Am4theushw+" target="_blank">React-admin</a>.</p>
+      <div class="actions">
+        <a class="button resume" href="" target="_blank">Resume</a>
+        <a class="button" href="https://www.linkedin.com/in/matheus-wichman-080773144" target="_blank">LinkedIn</a>
+        <a class="button" href="https://github.com/m4theushw" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <h2>My projects</h2>
+      <div class="projects">
+        <section>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem architecto eaque repellendus eveniet aut, tempore cum eius laudantium dolores accusamus</p>
+          <p><a href="https://superdividendos.com.br" target="_blank">Website</a> - <a href="https://github.com/m4theushw/superdividendos" target="_blank">GitHub</a></p>
+        </section>
+        <section>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem architecto eaque repellendus eveniet aut, tempore cum eius laudantium dolores accusamus</p>
+          <p><a href="https://achacasa.online" target="_blank">Website</a> - <a href="https://github.com/m4theushw/achacasa" target="_blank">GitHub</a></p>
+        </section>
+        <section>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem architecto eaque repellendus eveniet aut, tempore cum eius laudantium dolores accusamus</p>
+          <p><a href="https://unisinos.br/lab">Website</a></p>
+        </section>
+      </div>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>React</div>
+        <div>Redux</div>
+        <div>Redux-saga</div>
+        <div>TypeScript</div>
+        <div>Css-in-js</div>
+        <div>JavaScript</div>
+        <div>CSS</div>
+        <div>HTML</div>
+        <div>Testing Library</div>
+        <div>Styled-components</div>
+        <div>NodeJS</div>
+        <div>jQuery</div>
+        <div>Jasmine</div>
+        <div>Jest</div>
+        <div>Mocha</div>
+        <div>Python</div>
+        <div>Django</div>
+        <div>PHP</div>
+        <div>REST</div>
+        <div>GraphQL</div>
+        <div>Docker</div>
+        <div>Webpack</div>
+        <div>Parcel</div>
+      </div>
+    </section>
+    <section class="hire">
+      <h3>Are you looking for someone to add on your team?</h3>
+      <a class="button" href="mailto:me@matheushw.com">Contact me</a>
+    </section>
+  </main>
+  <script>
+    var birthday = new Date(1997, 5, 5);
+    var now = new Date();
+    var diffInSecs = (now - birthday) / 1000;
+    var age = diffInSecs / (12 * 30 * 24 * 3600);
+    document.getElementById('age').innerText = parseInt(age);
+  </script>
+</body>
+</html>
