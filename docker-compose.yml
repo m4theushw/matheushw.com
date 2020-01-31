@@ -6,7 +6,8 @@ services:
     container_name: matheushw_nginx
     restart: always
     volumes:
-      - ./dist:/usr/share/nginx/html
+      - ./dist:/var/www/html
+      - ./nginx:/etc/nginx/conf.d
     labels:
       - "traefik.http.routers.matheushw_secure.rule=Host(`matheushw.com`)"
       - "traefik.http.routers.matheushw_secure.tls.certresolver=matheushw"
