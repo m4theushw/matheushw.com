@@ -63,7 +63,7 @@ header {
   font-size: 1.2em;
   position: relative;
   background-color: var(--header-bg-color);
-  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 6px solid rgba(0, 0, 0, 0.2);
 }
 
 .avatar {
@@ -132,9 +132,16 @@ main > section {
   }
 
   .projects section {
+    flex: 1;
     margin-left: 20px;
     margin-right: 20px;
   }
+}
+
+.projects section img {
+  display: block;
+  margin: 0 auto 20px;
+  opacity: 0.4;
 }
 
 .skills div {
