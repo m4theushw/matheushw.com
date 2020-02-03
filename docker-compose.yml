@@ -8,6 +8,8 @@ services:
     volumes:
       - ./dist:/var/www/html
       - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web
     labels:
       - "traefik.http.routers.matheushw_secure.rule=Host(`matheushw.com`)"
       - "traefik.http.routers.matheushw_secure.tls.certresolver=matheushw"
@@ -17,3 +19,7 @@ services:
       - "traefik.http.routers.matheushw.middlewares=redirect-to-https"
       - "traefik.enable=true"
       - "traefik.docker.network=web"
+
+networks:
+  web:
+    external: true
